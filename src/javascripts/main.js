@@ -1,4 +1,9 @@
 import '../styles/main.scss';
 import 'bootstrap';
+import cards from './components/cards/cards';
 
-console.log('I will tell you the tale of Tinúviel');
+const init = () => {
+  cards.showCards();
+};
+
+init();

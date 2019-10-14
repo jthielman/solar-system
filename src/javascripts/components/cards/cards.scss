@@ -1,0 +1,22 @@
+.col {
+
+  .card {
+    background-color: midnightblue;
+    color: azure;
+    height: 240px;
+    border: 1px solid azure;
+
+    .card-body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1 1 0;
+      margin: 5px;
+
+      h1 {
+        text-align: center;
+        min-width: 5em;
+      }
+    }
+  }
+}
