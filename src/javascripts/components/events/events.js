@@ -1,14 +1,19 @@
 import $ from 'jquery';
 import info from '../info/info';
 
-const toggleImg = (e) => {
-  $(e.target).children('img').toggleClass('d-none');
-  $(e.target).children('h1').toggleClass('d-none');
+const showImg = (e) => {
+  $(e.target).children('img').removeClass('d-none');
+  $(e.target).children('h1').addClass('d-none');
+};
+
+const hideImg = (e) => {
+  $(e.target).children('h1').removeClass('d-none');
+  $(e.target).children('img').addClass('d-none');
 };
 
 const attachEvents = () => {
-  $('.card-body').hover(toggleImg);
-  $('img').hover(toggleImg);
+  $('body').on('mouseenter', '.card-body', showImg);
+  $('body').on('mouseleave', '.card-body', hideImg);
   $('body').on('click', '.planet-card', info.showInfo);
   $('body').on('click', '#close', info.banishInfo);
 };
