@@ -2,6 +2,8 @@ import utilities from '../../helpers/utilities';
 import planets from '../../helpers/data/planets';
 import cards from '../cards/cards';
 
+import './info.scss';
+
 const makeInfoCard = (obj) => {
   const domString = `
     <div id="info-card" class="card">

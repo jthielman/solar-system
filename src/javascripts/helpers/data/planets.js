@@ -63,6 +63,14 @@ const planets = [
     numberOfMoons: 13,
     nameOfLargestMoon: 'Triton',
   },
+  {
+    name: 'Pluto',
+    imageUrl: 'https://media1.tenor.com/images/122ccc40b991e38c8fc6ba974eb71e4d/tenor.gif?itemid=4559233',
+    description: 'Pluto is not a planet.',
+    isGasPlanet: false,
+    numberOfMoons: 5,
+    nameOfLargestMoon: 'Charon',
+  },
 ];
 
 const getPlanets = () => planets;
