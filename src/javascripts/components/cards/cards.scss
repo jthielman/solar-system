@@ -1,9 +1,21 @@
-.col {
+#card-container {
+  display: flex;
+  justify-content: center;
 
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.col {
+  width: 20em;
+  
   .card {
     background-color: midnightblue;
     color: azure;
-    height: 240px;
+    height: 20em;
+    width: 20em;
     border: 1px solid azure;
 
     .card-body {
@@ -16,6 +28,10 @@
       h1 {
         text-align: center;
         min-width: 5em;
+      }
+
+      img {
+        max-width: 100%;
       }
     }
   }
