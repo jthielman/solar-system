@@ -11,7 +11,7 @@ const makeCards = (arr) => {
       <div class="card">
         <div class="card-body">
           <h1>${arr[i].name}</h1>
-          <img>
+          <img src="${arr[i].imageUrl}" alt="${arr[i].name}" class="d-none">
         </div>
       </div>
     </div>
