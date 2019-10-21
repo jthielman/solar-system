@@ -1,11 +1,11 @@
 import '../styles/main.scss';
 import 'bootstrap';
 import cards from './components/cards/cards';
-import hover from './components/hover/hover';
+import events from './components/events/events';
 
 const init = () => {
   cards.showCards();
-  hover.attachEvents();
+  events.attachEvents();
 };
 
 init();

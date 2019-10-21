@@ -8,10 +8,10 @@ const makeCards = (arr) => {
   for (let i = 0; i < arr.length; i += 1) {
     stringToShow += `
     <div class="col">
-      <div class="card">
+      <div class="card planet-card">
         <div class="card-body">
           <h1>${arr[i].name}</h1>
-          <img src="${arr[i].imageUrl}" alt="${arr[i].name}" class="d-none">
+          <img id="planet${i}" src="${arr[i].imageUrl}" alt="${arr[i].name}" class="d-none">
         </div>
       </div>
     </div>
