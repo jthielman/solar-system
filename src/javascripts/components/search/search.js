@@ -1,4 +1,6 @@
 import $ from 'jquery';
+import cards from '../cards/cards';
+import planets from '../../helpers/data/planets';
 import utilities from '../../helpers/utilities';
 
 const makeSearchBar = () => {
@@ -8,9 +10,19 @@ const makeSearchBar = () => {
 
 const search = () => {
   $('#search-input').keyup(() => {
-    const value = $('#search-input').val();
-    $('.planet-card').hide();
-    /* $(`.planet-card:contains("${value}")`).closest('.planet-card').show(); */
+    utilities.showOnPage('planet-info', '');
+    const value = $('#search-input').val().toLowerCase(); // grabs the input contents
+    const planetsArr = planets.getPlanets();
+    const searchResults = [];
+    planetsArr.forEach((planet) => {
+      // I need to compare value to the planet.name and planet.description strings
+      if (planet.name.toLowerCase().includes(value) || planet.description.toLowerCase().includes(value)) {
+        // and then put the matching objects into their own array
+        searchResults.push(planet);
+      }
+    });
+    // and then print that new array to the DOM
+    cards.makeCards(searchResults);
   });
   if ($('#search-input').val() === '🔍 Search') {
     $('.planet-card').show();
