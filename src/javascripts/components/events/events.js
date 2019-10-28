@@ -12,8 +12,8 @@ const hideImg = (e) => {
 };
 
 const attachEvents = () => {
-  $('body').on('mouseenter', '.card-body', showImg);
-  $('body').on('mouseleave', '.card-body', hideImg);
+  $('#card-container').on('mouseleave', '.card-body', hideImg);
+  $('#card-container').on('mouseenter', '.card-body', showImg);
   $('body').on('click', '.planet-card', info.showInfo);
   $('body').on('click', '#close', info.banishInfo);
 };

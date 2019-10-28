@@ -25,4 +25,4 @@ const showCards = () => {
   makeCards(planets.getPlanets());
 };
 
-export default { showCards };
+export default { showCards, makeCards };

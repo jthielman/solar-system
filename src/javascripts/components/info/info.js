@@ -18,9 +18,10 @@ const makeInfoCard = (obj) => {
 };
 
 const showInfo = (e) => {
-  const planetIndex = e.target.id[6];
+  const planetName = e.target.alt;
   utilities.showOnPage('card-container', '');
-  makeInfoCard(planets.getPlanets()[planetIndex]);
+  const chosenPlanet = planets.getPlanets().find(({ name }) => name === planetName);
+  makeInfoCard(chosenPlanet);
 };
 
 const banishInfo = () => {
